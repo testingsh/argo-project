@@ -4,7 +4,7 @@ metadata:
   labels:
     app: nginx-shabo
   name: nginx-shabo
-  nmespace: shabo
+  namespace: shabo
 spec:
   replicas: 1
   selector:
