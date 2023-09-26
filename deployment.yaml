@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-shabo
+  name: nginx-shabo
+  nmespace: shabo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-shabo
+  template:
+    metadata:
+      labels:
+        app: nginx-shabo
+    spec:
+      containers:
+      - image: testing1010/nginx
+        name: nginx
+        ports:
+          - containerPort: 80
